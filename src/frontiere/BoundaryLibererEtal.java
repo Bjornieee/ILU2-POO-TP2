@@ -11,11 +11,11 @@ public class BoundaryLibererEtal {
 
 	public void libererEtal(String nomVendeur) {
 		StringBuilder chaine = new StringBuilder();
-		if(!controlLibererEtal.isVendeur(nomVendeur)) {
+		if (!controlLibererEtal.isVendeur(nomVendeur)) {
 			chaine.append("Mais vous n'êtes pas inscrit sur notre marché aujourd'hui !\n");
 		} else {
 			String[] etal = controlLibererEtal.libererEtal(nomVendeur);
-			if(Boolean.parseBoolean(etal[0])) {
+			if (Boolean.parseBoolean(etal[0])) {
 				chaine.append("Vous avez vendu ");
 				chaine.append(etal[4]);
 				chaine.append(" sur ");
@@ -28,7 +28,7 @@ public class BoundaryLibererEtal {
 			chaine.append(nomVendeur);
 			chaine.append(", passez une bonne journée\n");
 		}
-	System.out.println(chaine);
+		System.out.println(chaine);
 	}
 
 }
