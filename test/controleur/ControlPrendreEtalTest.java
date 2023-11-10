@@ -1,5 +1,6 @@
 package controleur;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import personnages.Chef;
@@ -14,7 +15,7 @@ class ControlPrendreEtalTest {
     private Chef abraracourcix;
     private Village village;
     private Gaulois bonemine;
-
+    private ControlPrendreEtal controlPrendreEtal;
     @BeforeEach
     void setUp() {
         System.out.println("Initialisation...");
@@ -23,11 +24,12 @@ class ControlPrendreEtalTest {
         village.setChef(abraracourcix);
         bonemine = new Gaulois("Bonemine",3);
         village.ajouterHabitant(bonemine);
+        controlPrendreEtal = new ControlPrendreEtal(new ControlVerifierIdentite(village),village);
+
     }
 
     @Test
     void resteEtals() {
-        ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(new ControlVerifierIdentite(village),village);
         controlPrendreEtal.prendreEtal("abraracourcix","fleurs",10);
         controlPrendreEtal.prendreEtal("Bonemine","fleurs",10);
         Gaulois asterix = new Gaulois("asterix",3);
@@ -46,14 +48,13 @@ class ControlPrendreEtalTest {
 
     @Test
     void prendreEtal() {
-        ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(new ControlVerifierIdentite(village),village);
         assertNotEquals(-1,controlPrendreEtal.prendreEtal("abraracourcix","fleurs",10));
         assertNotEquals(-1,controlPrendreEtal.prendreEtal("Bonemine","fleurs",10));
         assertEquals(-1,controlPrendreEtal.prendreEtal("Inconnu","fleurs",2));
     }
 
-    @Test
-    void verifierIdentite(){
-
+    @AfterEach
+    void aVoid(){
+        System.out.println("... Fin du test");
     }
 }

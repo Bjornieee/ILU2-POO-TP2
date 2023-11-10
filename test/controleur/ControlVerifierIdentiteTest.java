@@ -1,5 +1,6 @@
 package controleur;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import personnages.Chef;
@@ -13,6 +14,7 @@ class ControlVerifierIdentiteTest {
     private Chef abraracourcix;
     private Village village;
     private Gaulois bonemine;
+    private ControlVerifierIdentite controlVerifierIdentite;
 
     @BeforeEach
     void setUp() {
@@ -22,16 +24,20 @@ class ControlVerifierIdentiteTest {
         village.setChef(abraracourcix);
         bonemine = new Gaulois("Bonemine",3);
         village.ajouterHabitant(bonemine);
+        controlVerifierIdentite = new ControlVerifierIdentite(village);
+
     }
 
     @Test
     void verifierIdentite() {
-        ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
         assertTrue(controlVerifierIdentite.verifierIdentite("abraracourcix"));
         assertFalse(controlVerifierIdentite.verifierIdentite("Inconnu"));
         assertTrue(controlVerifierIdentite.verifierIdentite("Bonemine"));
 
 
     }
-
+    @AfterEach
+    void tearDown(){
+        System.out.println("... Fin du test");
+    }
 }

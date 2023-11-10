@@ -4,15 +4,15 @@ import personnages.Gaulois;
 import villagegaulois.Village;
 
 public class ControlVerifierIdentite {
-	private Village village;
+    private final Village village;
 
-	public ControlVerifierIdentite(Village village) {
-		this.village = village;
-	}
+    public ControlVerifierIdentite(Village village) {
+        this.village = village;
+    }
 
-	public boolean verifierIdentite(String nomVendeur) {
-		Gaulois gaulois;
-		gaulois = village.trouverHabitant(nomVendeur);
-		return gaulois!=null;
-	}
+    public boolean verifierIdentite(String nomVendeur) {
+        Gaulois gaulois;
+        gaulois = village.trouverHabitant(nomVendeur);
+        return gaulois != null;
+    }
 }

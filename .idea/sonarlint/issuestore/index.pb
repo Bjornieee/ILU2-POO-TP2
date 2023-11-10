@@ -29,10 +29,22 @@ J
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 Y
-)test/controleur/ControlEmmenagerTest.java,6/5/659c1736bbd0623f48bb90b08b0fc32694825fca
-Y
 )src/frontiere/BoundaryAcheterProduit.java,5/e/5e5d6eda798b7473dbf9ef81609f277074d915d5
 L
 src/villagegaulois/Etal.java,1/2/122f90650bd61e37b98235ff2d70b9e86f449a34
 ]
 -src/controleur/ControlTrouverEtalVendeur.java,a/8/a812035d09a4ddb21b62f2bfa7471850e08e7b9d
+Y
+)test/controleur/ControlEmmenagerTest.java,6/5/659c1736bbd0623f48bb90b08b0fc32694825fca
+b
+2test/controleur/ControlTrouverEtalVendeurTest.java,6/d/6db305f09c4de89fc31efbfaddcb759755acdc60
+[
++test/controleur/ControlPrendreEtalTest.java,9/2/92e96db9d9616e9c38430fe8580acd8cc292329a
+`
+0test/controleur/ControlVerifierIdentiteTest.java,7/4/74a0816200148a24fff03a2f222d16b8bc52fc12
+[
++test/controleur/ControlLibererEtalTest.java,1/c/1c359bdf607ddd7c839886331c1e111f87a34955
+_
+/test/controleur/ControlAfficherVillageTest.java,c/1/c1b67a7621b9e77488d6caa61845c2441e209c2d
+T
+$test/villagegaulois/VillageTest.java,a/7/a76c011de382e5ddd3a809f135b38a23f7c3282a
